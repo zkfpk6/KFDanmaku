@@ -4,7 +4,7 @@
 
 ## 效果
 
-![image](https://s3.ax1x.com/2020/12/07/Dvq8ET.gif)
+[点击查看效果图](https://s3.ax1x.com/2020/12/07/Dvq8ET.gif)
 
 ## 特性
 - [x] 支持完全自定义弹幕
