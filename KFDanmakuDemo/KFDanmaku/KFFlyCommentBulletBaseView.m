@@ -23,7 +23,7 @@
     frame.origin.x = self.superview.frame.size.width;
     self.frame = frame;
     
-    CGFloat totalDuration = (self.frame.size.width + self.trackWidth) / self.speedPerSecond;
+    CGFloat totalDuration = (self.frame.size.width + self.superview.frame.size.width) / self.speedPerSecond;
     CGFloat enterDuration = (self.frame.size.width + self.trackHorizontalPadding ) / self.speedPerSecond;
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(enterDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

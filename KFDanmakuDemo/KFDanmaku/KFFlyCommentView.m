@@ -68,7 +68,10 @@
  @param customView 自定义的view（注意，最高不能超过轨道的高，否则会出问题。轨道的高度请在FlyCommentViewConfig.h中配置）
  @param trackIndex 插入弹幕的轨道（为-1则代表自动寻找最不拥挤的轨道插入）
  */
-- (void)appendFlyCommentWithCustomView:(UIView *)customView toTrackIndex:(NSInteger)trackIndex {
+- (void)appendFlyCommentWithCustomView:(KFFlyCommentBulletBaseView *)customView toTrackIndex:(NSInteger)trackIndex {
+    if (![customView isKindOfClass:KFFlyCommentBulletBaseView.class]) {
+        return;
+    }
     NSInteger realTrackIndex = trackIndex;
     if (realTrackIndex == -1) {
         //找到最不拥挤的轨道序号

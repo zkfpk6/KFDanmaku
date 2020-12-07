@@ -40,7 +40,6 @@
 - (void)startBullet:(KFFlyCommentBulletBaseView *)view {
     self.running = YES;
     view.speedPerSecond = self.speedPerSecond;
-    view.trackWidth = self.frame.size.width;
     view.trackHorizontalPadding = self.trackHorizontalPadding;
     self.currentBulletView = view;
     __weak typeof(self) weakSelf = self;
