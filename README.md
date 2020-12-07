@@ -4,7 +4,7 @@
 
 ## 效果
 
-![image](https://github.com/zkfpk6/YGFlyCommentManager-Danmaku/blob/master/Untitled.gif)
+![image](https://s3.ax1x.com/2020/12/07/Dvq8ET.gif)
 
 ## 特性
 - [x] 支持完全自定义弹幕
@@ -26,34 +26,35 @@
 /**
  创建轨道
 
+ @param frame frame
+ @param trackHorizontalPadding 横向间距
+ @param trackVerticalPadding 轨道纵向间距
+ @param trackHeight 轨道高
  @param trackSpeedArray 轨道速度数组
- @param myCenterY 所有轨道的中心点
- @param trackWidth 轨道宽
- @param superView 加到哪个view上
  */
-[[YGFlyCommentManager sharedManager] createFlyCommentViewWithTrackSpeedArray:_speedArray 
-							myCenterY:self.view.frame.size.height/2 
-							trackWidth:self.view.frame.size.width 
-							shouldAddToView:self.view];	
-/**
- 开始播放弹幕
- */
-[[YGFlyCommentManager sharedManager] start];			
-UILabel *customLabel = [UILabel alloc]init];
-customLabel.text = @"这是一条弹幕";
-[customLabel sizeToFit];
+ _danmakuView = [[KFFlyCommentView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height) 
+                                 trackHorizontalPadding:10 
+                                   trackVerticalPadding:10 
+                                            trackHeight:40 
+                                        trackSpeedArray:_speedArray];
+ [self.view addSubview:_danmakuView];
+
 /**
  插入一条弹幕，可以插入任意继承UIView的对象
 
- @param customView 自定义的view（注意，最高不能超过轨道的高，否则会出问题。
+ @param customView 自定义的继承于view（注意，最高不能超过轨道的高，否则会出问题。
 轨道的高度请在FlyCommentViewConfig.h中配置）
  @param trackIndex 插入弹幕的轨道（为-1则代表自动寻找最不拥挤的轨道插入）
  */
-[[YGFlyCommentManager sharedManager] appendFlyCommentWithCustomView:customLabel toTrackIndex:-1];
+ [_danmakuView appendFlyCommentWithCustomView:customView toTrackIndex:-1];
 ```
 ##### 创建弹幕
  ```objc
- - (void)createFlyCommentViewWithTrackSpeedArray:(NSArray *)trackSpeedArray myCenterY:(float)myCenterY trackWidth:(float)trackWidth shouldAddToView:(UIView *)superView;
+ - (instancetype)initWithFrame:(CGRect)frame
+        trackHorizontalPadding:(CGFloat)trackHorizontalPadding
+          trackVerticalPadding:(CGFloat)trackVerticalPadding
+                   trackHeight:(CGFloat)trackHeight
+               trackSpeedArray:(NSArray *)trackSpeedArray;
  ```
  
  ##### 插入一条弹幕
@@ -61,26 +62,11 @@ customLabel.text = @"这是一条弹幕";
  - (void)appendFlyCommentWithCustomView:(UIView *)customView toTrackIndex:(NSInteger)trackIndex;
  ```
  
- ##### 开始播放弹幕
- ```objc
- - (void)start;
- ```
- 
- ##### 暂停播放弹幕
- ```objc
- - (void)pause;
- ```
- 
  ##### 停止播放弹幕（会清空所有弹幕）
  ```objc
  - (void)stop;
  ```
  
- ##### 销毁（不用一定要销毁，防止NSTimer内存泄露）
- ```objc
- - (void)destory;
- ```
- 
 ## 联系我
 - 邮箱: 651146554@qq.com
-- QQ：651146554）
+- QQ：651146554
