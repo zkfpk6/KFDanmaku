@@ -1,5 +1,5 @@
 //
-//  YGFlyCommentTrackView.h
+//  KFFlyCommentTrackView.h
 //  ParadiseWordLive
 //
 //  Created by zhangkaifeng on 2017/5/8.
@@ -12,7 +12,7 @@
 /**
  这个类是弹幕轨道的类
  */
-@interface YGFlyCommentTrackView : UIView
+@interface KFFlyCommentTrackView : UIView
 
 /**
  等待出现到屏幕中的弹幕view数组
@@ -23,6 +23,21 @@
  正在展示的弹幕view数组
  */
 @property (nonatomic,strong) NSMutableArray *showingArray;
+
+/**
+ 轨道内容间距
+ */
+@property (nonatomic, assign) CGFloat trackHorizontalPadding;
+
+/**
+ 轨道高
+ */
+@property (nonatomic, assign) CGFloat trackHeight;
+
+/**
+ 无限循环滚
+ */
+@property (nonatomic, assign) BOOL infinityLoop;
 
 /**
  向轨道中插入一条自定义的view

@@ -13,16 +13,16 @@
 		F9207B601EC2A7790025BD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9207B5E1EC2A7790025BD31 /* Main.storyboard */; };
 		F9207B621EC2A7790025BD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9207B611EC2A7790025BD31 /* Assets.xcassets */; };
 		F9207B651EC2A7790025BD31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9207B631EC2A7790025BD31 /* LaunchScreen.storyboard */; };
-		F9207B761EC2A78A0025BD31 /* YGFlyCommentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B6F1EC2A78A0025BD31 /* YGFlyCommentManager.m */; };
-		F9207B781EC2A78A0025BD31 /* YGFlyCommentTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B731EC2A78A0025BD31 /* YGFlyCommentTrackView.m */; };
+		F9207B761EC2A78A0025BD31 /* KFFlyCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B6F1EC2A78A0025BD31 /* KFFlyCommentView.m */; };
+		F9207B781EC2A78A0025BD31 /* KFFlyCommentTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B731EC2A78A0025BD31 /* KFFlyCommentTrackView.m */; };
 		F9207B7D1EC2AD170025BD31 /* GoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B7C1EC2AD170025BD31 /* GoViewController.m */; };
 		F9207B821EC2B1D00025BD31 /* YGFlyCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B7F1EC2B1CF0025BD31 /* YGFlyCommentModel.m */; };
-		F9207B831EC2B1D00025BD31 /* YGFlyCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B811EC2B1D00025BD31 /* YGFlyCommentView.m */; };
+		F9207B831EC2B1D00025BD31 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B811EC2B1D00025BD31 /* CustomView.m */; };
 		F9207B861EC2B1F70025BD31 /* YGFlyCommentViewAnother.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B851EC2B1F70025BD31 /* YGFlyCommentViewAnother.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F9207B521EC2A7790025BD31 /* YGFlyCommentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YGFlyCommentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9207B521EC2A7790025BD31 /* KFFlyCommentViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFFlyCommentViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9207B561EC2A7790025BD31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9207B581EC2A7790025BD31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F9207B591EC2A7790025BD31 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,17 +32,17 @@
 		F9207B611EC2A7790025BD31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9207B641EC2A7790025BD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9207B661EC2A7790025BD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9207B6E1EC2A78A0025BD31 /* YGFlyCommentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFlyCommentManager.h; sourceTree = "<group>"; };
-		F9207B6F1EC2A78A0025BD31 /* YGFlyCommentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGFlyCommentManager.m; sourceTree = "<group>"; };
-		F9207B721EC2A78A0025BD31 /* YGFlyCommentTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFlyCommentTrackView.h; sourceTree = "<group>"; };
-		F9207B731EC2A78A0025BD31 /* YGFlyCommentTrackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGFlyCommentTrackView.m; sourceTree = "<group>"; };
+		F9207B6E1EC2A78A0025BD31 /* KFFlyCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFFlyCommentView.h; sourceTree = "<group>"; };
+		F9207B6F1EC2A78A0025BD31 /* KFFlyCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFFlyCommentView.m; sourceTree = "<group>"; };
+		F9207B721EC2A78A0025BD31 /* KFFlyCommentTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFFlyCommentTrackView.h; sourceTree = "<group>"; };
+		F9207B731EC2A78A0025BD31 /* KFFlyCommentTrackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFFlyCommentTrackView.m; sourceTree = "<group>"; };
 		F9207B7A1EC2A7E80025BD31 /* FlyCommentViewConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyCommentViewConfig.h; sourceTree = "<group>"; };
 		F9207B7B1EC2AD170025BD31 /* GoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoViewController.h; sourceTree = "<group>"; };
 		F9207B7C1EC2AD170025BD31 /* GoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoViewController.m; sourceTree = "<group>"; };
 		F9207B7E1EC2B1CF0025BD31 /* YGFlyCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFlyCommentModel.h; sourceTree = "<group>"; };
 		F9207B7F1EC2B1CF0025BD31 /* YGFlyCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGFlyCommentModel.m; sourceTree = "<group>"; };
-		F9207B801EC2B1D00025BD31 /* YGFlyCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFlyCommentView.h; sourceTree = "<group>"; };
-		F9207B811EC2B1D00025BD31 /* YGFlyCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGFlyCommentView.m; sourceTree = "<group>"; };
+		F9207B801EC2B1D00025BD31 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		F9207B811EC2B1D00025BD31 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		F9207B841EC2B1F70025BD31 /* YGFlyCommentViewAnother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFlyCommentViewAnother.h; sourceTree = "<group>"; };
 		F9207B851EC2B1F70025BD31 /* YGFlyCommentViewAnother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGFlyCommentViewAnother.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,7 +61,7 @@
 		F9207B491EC2A7790025BD31 = {
 			isa = PBXGroup;
 			children = (
-				F9207B541EC2A7790025BD31 /* YGFlyCommentDemo */,
+				F9207B541EC2A7790025BD31 /* KFFlyCommentViewDemo */,
 				F9207B531EC2A7790025BD31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,21 +69,21 @@
 		F9207B531EC2A7790025BD31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9207B521EC2A7790025BD31 /* YGFlyCommentDemo.app */,
+				F9207B521EC2A7790025BD31 /* KFFlyCommentViewDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F9207B541EC2A7790025BD31 /* YGFlyCommentDemo */ = {
+		F9207B541EC2A7790025BD31 /* KFFlyCommentViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F9207B6C1EC2A78A0025BD31 /* YGFlyCommentManager */,
+				F9207B6C1EC2A78A0025BD31 /* KFFlyCommentView */,
 				F9207B581EC2A7790025BD31 /* AppDelegate.h */,
 				F9207B591EC2A7790025BD31 /* AppDelegate.m */,
 				F9207B7E1EC2B1CF0025BD31 /* YGFlyCommentModel.h */,
 				F9207B7F1EC2B1CF0025BD31 /* YGFlyCommentModel.m */,
-				F9207B801EC2B1D00025BD31 /* YGFlyCommentView.h */,
-				F9207B811EC2B1D00025BD31 /* YGFlyCommentView.m */,
+				F9207B801EC2B1D00025BD31 /* CustomView.h */,
+				F9207B811EC2B1D00025BD31 /* CustomView.m */,
 				F9207B841EC2B1F70025BD31 /* YGFlyCommentViewAnother.h */,
 				F9207B851EC2B1F70025BD31 /* YGFlyCommentViewAnother.m */,
 				F9207B5B1EC2A7790025BD31 /* ViewController.h */,
@@ -96,7 +96,7 @@
 				F9207B661EC2A7790025BD31 /* Info.plist */,
 				F9207B551EC2A7790025BD31 /* Supporting Files */,
 			);
-			path = YGFlyCommentDemo;
+			path = KFFlyCommentViewDemo;
 			sourceTree = "<group>";
 		};
 		F9207B551EC2A7790025BD31 /* Supporting Files */ = {
@@ -107,24 +107,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F9207B6C1EC2A78A0025BD31 /* YGFlyCommentManager */ = {
+		F9207B6C1EC2A78A0025BD31 /* KFFlyCommentView */ = {
 			isa = PBXGroup;
 			children = (
 				F9207B7A1EC2A7E80025BD31 /* FlyCommentViewConfig.h */,
-				F9207B6E1EC2A78A0025BD31 /* YGFlyCommentManager.h */,
-				F9207B6F1EC2A78A0025BD31 /* YGFlyCommentManager.m */,
-				F9207B721EC2A78A0025BD31 /* YGFlyCommentTrackView.h */,
-				F9207B731EC2A78A0025BD31 /* YGFlyCommentTrackView.m */,
+				F9207B6E1EC2A78A0025BD31 /* KFFlyCommentView.h */,
+				F9207B6F1EC2A78A0025BD31 /* KFFlyCommentView.m */,
+				F9207B721EC2A78A0025BD31 /* KFFlyCommentTrackView.h */,
+				F9207B731EC2A78A0025BD31 /* KFFlyCommentTrackView.m */,
 			);
-			path = YGFlyCommentManager;
+			path = KFFlyCommentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F9207B511EC2A7790025BD31 /* YGFlyCommentDemo */ = {
+		F9207B511EC2A7790025BD31 /* KFFlyCommentViewDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9207B691EC2A7790025BD31 /* Build configuration list for PBXNativeTarget "YGFlyCommentDemo" */;
+			buildConfigurationList = F9207B691EC2A7790025BD31 /* Build configuration list for PBXNativeTarget "KFFlyCommentViewDemo" */;
 			buildPhases = (
 				F9207B4E1EC2A7790025BD31 /* Sources */,
 				F9207B4F1EC2A7790025BD31 /* Frameworks */,
@@ -134,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = YGFlyCommentDemo;
-			productName = YGFlyCommentDemo;
-			productReference = F9207B521EC2A7790025BD31 /* YGFlyCommentDemo.app */;
+			name = KFFlyCommentViewDemo;
+			productName = KFFlyCommentViewDemo;
+			productReference = F9207B521EC2A7790025BD31 /* KFFlyCommentViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -155,11 +155,12 @@
 					};
 				};
 			};
-			buildConfigurationList = F9207B4D1EC2A7790025BD31 /* Build configuration list for PBXProject "YGFlyCommentDemo" */;
+			buildConfigurationList = F9207B4D1EC2A7790025BD31 /* Build configuration list for PBXProject "KFFlyCommentViewDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -168,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9207B511EC2A7790025BD31 /* YGFlyCommentDemo */,
+				F9207B511EC2A7790025BD31 /* KFFlyCommentViewDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -193,12 +194,12 @@
 			files = (
 				F9207B7D1EC2AD170025BD31 /* GoViewController.m in Sources */,
 				F9207B5D1EC2A7790025BD31 /* ViewController.m in Sources */,
-				F9207B761EC2A78A0025BD31 /* YGFlyCommentManager.m in Sources */,
+				F9207B761EC2A78A0025BD31 /* KFFlyCommentView.m in Sources */,
 				F9207B5A1EC2A7790025BD31 /* AppDelegate.m in Sources */,
 				F9207B821EC2B1D00025BD31 /* YGFlyCommentModel.m in Sources */,
-				F9207B781EC2A78A0025BD31 /* YGFlyCommentTrackView.m in Sources */,
+				F9207B781EC2A78A0025BD31 /* KFFlyCommentTrackView.m in Sources */,
 				F9207B861EC2B1F70025BD31 /* YGFlyCommentViewAnother.m in Sources */,
-				F9207B831EC2B1D00025BD31 /* YGFlyCommentView.m in Sources */,
+				F9207B831EC2B1D00025BD31 /* CustomView.m in Sources */,
 				F9207B571EC2A7790025BD31 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,10 +321,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7XA9B9NTWF;
-				INFOPLIST_FILE = YGFlyCommentDemo/Info.plist;
+				INFOPLIST_FILE = KFFlyCommentViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ccyouge.YGFlyCommentDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccyouge.KFFlyCommentViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -333,10 +334,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7XA9B9NTWF;
-				INFOPLIST_FILE = YGFlyCommentDemo/Info.plist;
+				INFOPLIST_FILE = KFFlyCommentViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ccyouge.YGFlyCommentDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccyouge.KFFlyCommentViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -344,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F9207B4D1EC2A7790025BD31 /* Build configuration list for PBXProject "YGFlyCommentDemo" */ = {
+		F9207B4D1EC2A7790025BD31 /* Build configuration list for PBXProject "KFFlyCommentViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9207B671EC2A7790025BD31 /* Debug */,
@@ -353,13 +354,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9207B691EC2A7790025BD31 /* Build configuration list for PBXNativeTarget "YGFlyCommentDemo" */ = {
+		F9207B691EC2A7790025BD31 /* Build configuration list for PBXNativeTarget "KFFlyCommentViewDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F9207B6A1EC2A7790025BD31 /* Debug */,
 				F9207B6B1EC2A7790025BD31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

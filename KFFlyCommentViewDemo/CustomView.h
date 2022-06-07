@@ -13,7 +13,7 @@
 /**
  这个类是自定义某一条弹幕的view
  */
-@interface YGFlyCommentView : UIView
+@interface CustomView : UIView
 
 /**
  弹幕的model

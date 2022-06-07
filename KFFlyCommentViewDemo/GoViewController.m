@@ -7,12 +7,15 @@
 //
 
 #import "GoViewController.h"
-#import "YGFlyCommentManager.h"
+#import "KFFlyCommentView.h"
+#import "CustomView.h"
 #import "YGFlyCommentModel.h"
-#import "YGFlyCommentView.h"
+#import "KFFlyCommentView.h"
 #import "YGFlyCommentViewAnother.h"
 
 @interface GoViewController ()
+
+@property (nonatomic, strong) KFFlyCommentView *commentView;
 
 @end
 
@@ -21,8 +24,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[YGFlyCommentManager sharedManager] createFlyCommentViewWithTrackSpeedArray:_speedArray myCenterY:self.view.frame.size.height/2 trackWidth:self.view.frame.size.width shouldAddToView:self.view];
-    [[YGFlyCommentManager sharedManager] start];
+    
+    self.commentView = [[KFFlyCommentView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 0) infinityLoop:YES trackVerticalMargin:10 trackHorizontalPadding:10 trackHeight:100 trackSpeedArray:self.speedArray];
+    [self.view addSubview:self.commentView];
+    [self.commentView start];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,17 +40,17 @@
     sender.selected = !sender.isSelected;
     if (sender.isSelected)
     {
-        [[YGFlyCommentManager sharedManager] start];
+        [self.commentView start];
     }
     else
     {
-        [[YGFlyCommentManager sharedManager] pause];
+        [self.commentView pause];
     }
 }
 
 - (IBAction)insertFlyComment:(id)sender
 {
-    NSArray *classArray = @[@"YGFlyCommentView",@"YGFlyCommentViewAnother"];
+    NSArray *classArray = @[@"CustomView",@"YGFlyCommentViewAnother"];
     NSArray *nameArray = @[@"mc子龙",@"小明",@"赵四",@"狂小狗",@"葬爱"];
     NSArray *msgArray = @[@"老铁666",@"主播，多少礼物给卡黄啊？",@"文明观球，大家有秩序排队观看，不要着急",@"色青主播，我报警啦",@"就是个萨比，还扮滴酷酷滴"];
     NSArray *avatarArray = @[@"home_login_qq_color",@"home_login_wechat_color",@"home_login_weibo_color",@"icon_120-1",@"rank_charm_heart"];
@@ -60,13 +65,13 @@
     model.userAvatar = avatarArray[avatarRandomIndex];
     
     
-    YGFlyCommentView *customView = [[NSClassFromString(classArray[classRandomIndex]) alloc]initWithMessageModel: model height:40];
-    [[YGFlyCommentManager sharedManager] appendFlyCommentWithCustomView:customView toTrackIndex:-1];
+    CustomView *customView = [[NSClassFromString(classArray[classRandomIndex]) alloc]initWithMessageModel: model height:40];
+    [self.commentView appendFlyCommentWithCustomView:customView toTrackIndex:-1];
 }
 
 - (void)dealloc
 {
-    [[YGFlyCommentManager sharedManager] destory];
+    [self.commentView destory];
 }
 
 /*

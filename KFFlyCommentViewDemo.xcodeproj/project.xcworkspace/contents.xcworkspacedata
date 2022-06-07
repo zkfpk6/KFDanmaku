@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:YGFlyCommentDemo.xcodeproj">
+      location = "self:/Users/zhangkaifeng/Desktop/git/KFDanmaku/KFFlyCommentViewDemo.xcodeproj">
    </FileRef>
 </Workspace>

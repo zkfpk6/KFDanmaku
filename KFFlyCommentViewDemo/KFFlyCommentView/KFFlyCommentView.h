@@ -1,5 +1,5 @@
 //
-//  YGFlyCommentManager.h
+//  KFFlyCommentView.h
 //  ParadiseWordLive
 //
 //  Created by zhangkaifeng on 2017/5/8.
@@ -7,37 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YGFlyCommentTrackView.h"
+#import "KFFlyCommentTrackView.h"
 
-/**
- 这个类是管理类，一般调用这个类来管理轨道和弹幕
- */
-@interface YGFlyCommentManager : NSObject
+@interface KFFlyCommentView : UIView
 
-@property (nonatomic,strong) NSArray *trackSpeedArray;
-@property (nonatomic,assign) float myCenterY;
-@property (nonatomic,assign) float trackWidth;
-@property (nonatomic,strong) NSTimer *timer;
-@property (nonatomic,strong) UIView *superView;
-@property (nonatomic,strong) NSMutableArray *trackArray;
-@property (nonatomic,strong) UIView *baseView;
-
-/**
- 单例创建方法
-
- @return 单例
- */
-+ (YGFlyCommentManager *)sharedManager;
 
 /**
  创建轨道
 
+ @param frame frame
+ @param infinityLoop 是否无线循环滚
+ @param trackVerticalMargin 轨道间距
+ @param trackHorizontalPadding 轨道中内容距离
+ @param trackHeight 轨道高度
  @param trackSpeedArray 轨道速度数组
- @param myCenterY 所有轨道的中心点
- @param trackWidth 轨道宽
- @param superView 加到哪个view上
  */
-- (void)createFlyCommentViewWithTrackSpeedArray:(NSArray *)trackSpeedArray myCenterY:(float)myCenterY trackWidth:(float)trackWidth shouldAddToView:(UIView *)superView;
+- (instancetype)initWithFrame:(CGRect)frame
+                 infinityLoop:(BOOL)infinityLoop
+          trackVerticalMargin:(CGFloat)trackVerticalMargin
+       trackHorizontalPadding:(CGFloat)trackHorizontalPadding
+                  trackHeight:(CGFloat)trackHeight
+              trackSpeedArray:(NSArray *)trackSpeedArray;
 
 /**
  插入一条弹幕，可以插入任意继承UIView的对象

@@ -1,66 +1,68 @@
 //
-//  YGFlyCommentManager.m
+//  KFFlyCommentView.m
 //  ParadiseWordLive
 //
 //  Created by zhangkaifeng on 2017/5/8.
 //  Copyright © 2017年 张楷枫. All rights reserved.
 //
 
-#import "YGFlyCommentManager.h"
+#import "KFFlyCommentView.h"
 
-@implementation YGFlyCommentManager
+@interface KFFlyCommentView ()
 
-+ (YGFlyCommentManager *)sharedManager
-{
-    static YGFlyCommentManager *sharedAccountManagerInstance = nil;
-    static dispatch_once_t predicate;
-    dispatch_once(&predicate, ^{
-        sharedAccountManagerInstance = [[self alloc] init];
-    });
-    return sharedAccountManagerInstance;
+@property (nonatomic, strong) NSArray *trackSpeedArray;
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, assign) CGFloat trackVerticalMargin;
+@property (nonatomic, assign) CGFloat trackHorizontalPadding;
+@property (nonatomic, assign) CGFloat trackHeight;
+@property (nonatomic, assign) BOOL infinityLoop;
+@property (nonatomic, strong) NSMutableArray *trackArray;
+
+@end
+
+@implementation KFFlyCommentView
+
+- (instancetype)initWithFrame:(CGRect)frame
+                 infinityLoop:(BOOL)infinityLoop
+          trackVerticalMargin:(CGFloat)trackVerticalMargin
+       trackHorizontalPadding:(CGFloat)trackHorizontalPadding
+                  trackHeight:(CGFloat)trackHeight
+              trackSpeedArray:(NSArray *)trackSpeedArray {
+    self = [super initWithFrame:frame];
+    if (self) {
+        _trackSpeedArray = trackSpeedArray;
+        _trackVerticalMargin = trackVerticalMargin;
+        _trackHorizontalPadding = trackHorizontalPadding;
+        _infinityLoop = infinityLoop;
+        _trackHeight = trackHeight;
+        _infinityLoop = infinityLoop;
+        _trackArray = [[NSMutableArray alloc] init];
+        [self configUI];
+    }
+    return self;
 }
 
-- (void)createFlyCommentViewWithTrackSpeedArray:(NSArray *)trackSpeedArray myCenterY:(float)myCenterY trackWidth:(float)trackWidth shouldAddToView:(UIView *)superView
-{
-    
-    _superView = superView;
-    _trackSpeedArray = trackSpeedArray;
-    _myCenterY = myCenterY;
-    _trackWidth = trackWidth;
-    _trackArray = [[NSMutableArray alloc]init];
-    
-    [self configUI];
-}
-
-- (void)configUI
-{
-    //先建立一个baseview
-    _baseView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, _trackWidth, 0)];
-    _baseView.userInteractionEnabled = NO;
-    [_superView addSubview:_baseView];
-    
-    for (int i = 0; i<_trackSpeedArray.count; i++)
-    {
+- (void)configUI {
+    for (int i = 0; i<_trackSpeedArray.count; i++) {
         //把轨道按照间距加到baseview上，再加到数组中
-        YGFlyCommentTrackView *trackView = [[YGFlyCommentTrackView alloc]initWithFrame:CGRectMake(0, (TRACK_HEIGHT + TRACK_VERTICAL_PADDING) * i, _baseView.frame.size.width, TRACK_HEIGHT)];
-        [_baseView addSubview:trackView];
+        KFFlyCommentTrackView *trackView = [[KFFlyCommentTrackView alloc]initWithFrame:CGRectMake(0, (self.trackHeight + self.trackVerticalMargin) * i, self.frame.size.width, self.trackHeight)];
+        trackView.trackHeight = self.trackHeight;
+        trackView.trackHorizontalPadding = self.trackHorizontalPadding;
+        trackView.infinityLoop = self.infinityLoop;
+        [self addSubview:trackView];
         [_trackArray addObject:trackView];
-        if (_trackSpeedArray.count - 1 == i)
-        {
-            _baseView.frame = CGRectMake(_baseView.frame.origin.x, _baseView.frame.origin.y, _baseView.frame.size.width, CGRectGetMaxY(trackView.frame));
-            _baseView.center = CGPointMake(_baseView.center.x, _myCenterY);
+        if (_trackSpeedArray.count - 1 == i) {
+            self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, CGRectGetMaxY(trackView.frame));
         }
     }
 }
 
-- (void)start
-{
-    if (_timer)
-    {
+- (void)start {
+    if (_timer) {
         return;
     }
     //开始其实就是开始定时器
-    _timer = [NSTimer timerWithTimeInterval:0.01 target:self selector:@selector(startAction) userInfo:nil repeats:YES];
+    _timer = [NSTimer timerWithTimeInterval:1.0 / COMMENT_VIEW_CONFIG_FPS target:self selector:@selector(startAction) userInfo:nil repeats:YES];
     //加到runloop，防止scrollview影响
     [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
@@ -78,7 +80,7 @@
     [_timer invalidate];
     _timer = nil;
     //然后移除所有轨道的弹幕
-    for (YGFlyCommentTrackView *trackView in _trackArray)
+    for (KFFlyCommentTrackView *trackView in _trackArray)
     {
         [trackView cleanTrack];
     }
@@ -88,16 +90,13 @@
 {
     [_timer invalidate];
     _timer = nil;
-    for (YGFlyCommentTrackView *trackView in _trackArray)
+    for (KFFlyCommentTrackView *trackView in _trackArray)
     {
         [trackView cleanTrack];
         [trackView removeFromSuperview];
     }
     [_trackArray removeAllObjects];
-    [_baseView removeFromSuperview];
     _trackSpeedArray = nil;
-    _superView = nil;
-    _baseView = nil;
     _trackArray = nil;
 }
 
@@ -109,7 +108,7 @@
     for (int i = 0; i<_trackArray.count; i++)
     {
         //其实就是遍历所有轨道执行轨道定时器的方法
-        YGFlyCommentTrackView *trackView = _trackArray[i];
+        KFFlyCommentTrackView *trackView = _trackArray[i];
         [trackView moveFlyCommentViewWithSpeed:[_trackSpeedArray[i] floatValue]];
     }
 }
@@ -129,7 +128,7 @@
         realTrackIndex = [self findTheMinTotalWidthTrack];
     }
     
-    YGFlyCommentTrackView *trackView = _trackArray[realTrackIndex];
+    KFFlyCommentTrackView *trackView = _trackArray[realTrackIndex];
     [trackView appendFlyCommentWithCustomView:customView];
 }
 
@@ -140,12 +139,12 @@
  */
 - (int)findTheMinTotalWidthTrack
 {
-    YGFlyCommentTrackView *firstTrackView = _trackArray[0];
+    KFFlyCommentTrackView *firstTrackView = _trackArray[0];
     int minWidthIndex = 0;
     float minWidth = [firstTrackView rightOutScreenWidth];
     for (int i = 0; i<_trackArray.count; i++)
     {
-        YGFlyCommentTrackView *trackView = _trackArray[i];
+        KFFlyCommentTrackView *trackView = _trackArray[i];
         float trackRightOutScreenWidth = [trackView rightOutScreenWidth];
         if (trackRightOutScreenWidth < minWidth)
         {

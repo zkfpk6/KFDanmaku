@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F9207B511EC2A7790025BD31"
-               BuildableName = "YGFlyCommentDemo.app"
-               BlueprintName = "YGFlyCommentDemo"
-               ReferencedContainer = "container:YGFlyCommentDemo.xcodeproj">
+               BuildableName = "KFFlyCommentViewDemo.app"
+               BlueprintName = "KFFlyCommentViewDemo"
+               ReferencedContainer = "container:KFFlyCommentViewDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,19 +27,17 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-      </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9207B511EC2A7790025BD31"
-            BuildableName = "YGFlyCommentDemo.app"
-            BlueprintName = "YGFlyCommentDemo"
-            ReferencedContainer = "container:YGFlyCommentDemo.xcodeproj">
+            BuildableName = "KFFlyCommentViewDemo.app"
+            BlueprintName = "KFFlyCommentViewDemo"
+            ReferencedContainer = "container:KFFlyCommentViewDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -56,13 +54,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9207B511EC2A7790025BD31"
-            BuildableName = "YGFlyCommentDemo.app"
-            BlueprintName = "YGFlyCommentDemo"
-            ReferencedContainer = "container:YGFlyCommentDemo.xcodeproj">
+            BuildableName = "KFFlyCommentViewDemo.app"
+            BlueprintName = "KFFlyCommentViewDemo"
+            ReferencedContainer = "container:KFFlyCommentViewDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9207B511EC2A7790025BD31"
-            BuildableName = "YGFlyCommentDemo.app"
-            BlueprintName = "YGFlyCommentDemo"
-            ReferencedContainer = "container:YGFlyCommentDemo.xcodeproj">
+            BuildableName = "KFFlyCommentViewDemo.app"
+            BlueprintName = "KFFlyCommentViewDemo"
+            ReferencedContainer = "container:KFFlyCommentViewDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
