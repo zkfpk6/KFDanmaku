@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "1340"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,15 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F9207B511EC2A7790025BD31"
-<<<<<<< HEAD:KFDanmakuDemo.xcodeproj/xcshareddata/xcschemes/KFDanmakuDemo.xcscheme
-               BuildableName = "KFDanmakuDemo.app"
-               BlueprintName = "KFDanmakuDemo"
-               ReferencedContainer = "container:KFDanmakuDemo.xcodeproj">
-=======
                BuildableName = "KFFlyCommentViewDemo.app"
                BlueprintName = "KFFlyCommentViewDemo"
                ReferencedContainer = "container:KFFlyCommentViewDemo.xcodeproj">
->>>>>>> 新分支:KFFlyCommentViewDemo.xcodeproj/xcshareddata/xcschemes/YGFlyCommentDemo.xcscheme
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -37,15 +31,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9207B511EC2A7790025BD31"
-<<<<<<< HEAD:KFDanmakuDemo.xcodeproj/xcshareddata/xcschemes/KFDanmakuDemo.xcscheme
-            BuildableName = "KFDanmakuDemo.app"
-            BlueprintName = "KFDanmakuDemo"
-            ReferencedContainer = "container:KFDanmakuDemo.xcodeproj">
-=======
             BuildableName = "KFFlyCommentViewDemo.app"
             BlueprintName = "KFFlyCommentViewDemo"
             ReferencedContainer = "container:KFFlyCommentViewDemo.xcodeproj">
->>>>>>> 新分支:KFFlyCommentViewDemo.xcodeproj/xcshareddata/xcschemes/YGFlyCommentDemo.xcscheme
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -66,15 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9207B511EC2A7790025BD31"
-<<<<<<< HEAD:KFDanmakuDemo.xcodeproj/xcshareddata/xcschemes/KFDanmakuDemo.xcscheme
-            BuildableName = "KFDanmakuDemo.app"
-            BlueprintName = "KFDanmakuDemo"
-            ReferencedContainer = "container:KFDanmakuDemo.xcodeproj">
-=======
             BuildableName = "KFFlyCommentViewDemo.app"
             BlueprintName = "KFFlyCommentViewDemo"
             ReferencedContainer = "container:KFFlyCommentViewDemo.xcodeproj">
->>>>>>> 新分支:KFFlyCommentViewDemo.xcodeproj/xcshareddata/xcschemes/YGFlyCommentDemo.xcscheme
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -89,15 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F9207B511EC2A7790025BD31"
-<<<<<<< HEAD:KFDanmakuDemo.xcodeproj/xcshareddata/xcschemes/KFDanmakuDemo.xcscheme
-            BuildableName = "KFDanmakuDemo.app"
-            BlueprintName = "KFDanmakuDemo"
-            ReferencedContainer = "container:KFDanmakuDemo.xcodeproj">
-=======
             BuildableName = "KFFlyCommentViewDemo.app"
             BlueprintName = "KFFlyCommentViewDemo"
             ReferencedContainer = "container:KFFlyCommentViewDemo.xcodeproj">
->>>>>>> 新分支:KFFlyCommentViewDemo.xcodeproj/xcshareddata/xcschemes/YGFlyCommentDemo.xcscheme
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

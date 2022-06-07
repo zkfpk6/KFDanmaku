@@ -1,23 +1,18 @@
 //
-//  YGFlyCommentView.h
-//  ParadiseWordLive
+//  YGFlyCommentViewAnother.h
+//  YGFlyCommentDemo
 //
-//  Created by zhangkaifeng on 2017/5/8.
-//  Copyright © 2017年. All rights reserved.
+//  Created by zhangkaifeng on 2017/5/10.
+//  Copyright © 2017年 张楷枫. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "YGFlyCommentModel.h"
-#import "KFDanmaku/KFFlyCommentBulletBaseView.h"
 
 /**
  这个类是自定义某一条弹幕的view
  */
-<<<<<<< HEAD:KFDanmakuDemo/YGFlyCommentView.h
-@interface YGFlyCommentView : KFFlyCommentBulletBaseView
-=======
-@interface CustomView : UIView
->>>>>>> 新分支:KFFlyCommentViewDemo/CustomView.h
+@interface YGFlyCommentViewAnother : UIView
 
 /**
  弹幕的model
@@ -26,7 +21,7 @@
 
 /**
  初始化方法
-
+ 
  @param messageModel 消息的model
  @return 自己
  */

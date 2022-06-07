@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BE3DD776CCB7E538498EFA8307539145B3FEF020",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A4C24BAE6424A7D6B20FEE7FFCBF1B6DB22BEA16" : 9223372036854775807,
+    "BE3DD776CCB7E538498EFA8307539145B3FEF020" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DC4940B7-18F9-4726-BA75-BB72312C3B5A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A4C24BAE6424A7D6B20FEE7FFCBF1B6DB22BEA16" : "",
+    "BE3DD776CCB7E538498EFA8307539145B3FEF020" : "YGFlyCommentDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YGFlyCommentDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "YGFlyCommentDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zkfpk6\/YGFlyCommnet.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A4C24BAE6424A7D6B20FEE7FFCBF1B6DB22BEA16"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zkfpk6\/YGFlyCommentManager-Danmaku.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BE3DD776CCB7E538498EFA8307539145B3FEF020"
+    }
+  ]
+}
