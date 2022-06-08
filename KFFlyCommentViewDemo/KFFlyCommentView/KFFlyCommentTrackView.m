@@ -37,9 +37,9 @@
     [self addGestureRecognizer:_panGestureRecognizer];
 }
 
-- (void)setInfinityLoop:(BOOL)infinityLoop {
-    _infinityLoop = infinityLoop;
-    _panGestureRecognizer.enabled = infinityLoop;
+- (void)setDragEnable:(BOOL)dragEnable {
+    _dragEnable = dragEnable;
+    _panGestureRecognizer.enabled = dragEnable;
 }
 
 - (void)panAction:(UIPanGestureRecognizer *)panGestureRecognizer {
@@ -81,6 +81,10 @@
         //如果最右侧的那条弹幕完全出现在屏幕中
         else
         {
+            //从屏幕左边插 紧跟上一条
+            if (self.joinWithLeftEdge) {
+                view.frame = CGRectMake(CGRectGetMaxX(lastView.frame) + self.trackHorizontalPadding, view.frame.origin.y, view.frame.size.width, view.frame.size.height);
+            }
             //加到轨道上
             [self addSubview:view];
             //加到展示数组中
@@ -90,8 +94,12 @@
     //如果连正在展示的都没有
     else
     {
+        //从屏幕左边插，直接最左侧
         //加到轨道上
         [self addSubview:view];
+        if (self.joinWithLeftEdge) {
+            view.frame = CGRectMake(0, view.frame.origin.y, view.frame.size.width, view.frame.size.height);
+        }
         //加到展示数组中
         [_showingArray addObject:view];
     }

@@ -39,6 +39,16 @@
 @property (nonatomic, assign) BOOL infinityLoop;
 
 /**
+ 从屏幕左侧插入
+ */
+@property (nonatomic, assign) BOOL joinWithLeftEdge;
+
+/**
+ 是否可拖动
+ */
+@property (nonatomic, assign) BOOL dragEnable;
+
+/**
  向轨道中插入一条自定义的view
 
  @param view 自定义的view，高度不可超过轨道的高，否则出问题

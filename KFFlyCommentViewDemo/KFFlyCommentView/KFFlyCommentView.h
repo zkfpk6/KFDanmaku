@@ -18,16 +18,11 @@
  创建轨道
 
  @param frame frame
- @param infinityLoop 是否无线循环滚
- @param trackVerticalMargin 轨道间距
- @param trackHorizontalPadding 轨道中内容距离
  @param trackHeight 轨道高度
  @param trackSpeedArray 轨道速度数组
  */
 - (instancetype)initWithFrame:(CGRect)frame
-                 infinityLoop:(BOOL)infinityLoop
           trackVerticalMargin:(CGFloat)trackVerticalMargin
-       trackHorizontalPadding:(CGFloat)trackHorizontalPadding
                   trackHeight:(CGFloat)trackHeight
               trackSpeedArray:(NSArray *)trackSpeedArray;
 
@@ -58,6 +53,32 @@
  销毁（不用一定要销毁，防止NSTimer内存泄露）
  */
 - (void)destory;
+
+/**
+ 是否无限滚动 default:NO
+ */
+@property (nonatomic, assign) BOOL infinityLoop;
+
+/**
+ 是否从左侧开始 default:NO
+ */
+@property (nonatomic, assign) BOOL joinWithLeftEdge;
+
+/**
+ 是否可拖动 default:NO
+ */
+@property (nonatomic, assign) BOOL dragEnable;
+
+/**
+ 轨道中内容最小间距 default:10
+ */
+@property (nonatomic, assign) CGFloat trackHorizontalPadding;
+
+/**
+ 轨道数组
+ */
+@property (nonatomic, strong, readonly) NSMutableArray <KFFlyCommentTrackView *>*trackArray;
+
 
 
 @end

@@ -13,31 +13,24 @@
 @property (nonatomic, strong) NSArray *trackSpeedArray;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) CGFloat trackVerticalMargin;
-@property (nonatomic, assign) CGFloat trackHorizontalPadding;
 @property (nonatomic, assign) CGFloat trackHeight;
-@property (nonatomic, assign) BOOL infinityLoop;
-@property (nonatomic, strong) NSMutableArray *trackArray;
 
 @end
 
 @implementation KFFlyCommentView
 
 - (instancetype)initWithFrame:(CGRect)frame
-                 infinityLoop:(BOOL)infinityLoop
           trackVerticalMargin:(CGFloat)trackVerticalMargin
-       trackHorizontalPadding:(CGFloat)trackHorizontalPadding
                   trackHeight:(CGFloat)trackHeight
               trackSpeedArray:(NSArray *)trackSpeedArray {
     self = [super initWithFrame:frame];
     if (self) {
         _trackSpeedArray = trackSpeedArray;
         _trackVerticalMargin = trackVerticalMargin;
-        _trackHorizontalPadding = trackHorizontalPadding;
-        _infinityLoop = infinityLoop;
         _trackHeight = trackHeight;
-        _infinityLoop = infinityLoop;
         _trackArray = [[NSMutableArray alloc] init];
         [self configUI];
+        [self initDefaultValue];
     }
     return self;
 }
@@ -55,6 +48,13 @@
             self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, CGRectGetMaxY(trackView.frame));
         }
     }
+}
+
+- (void)initDefaultValue {
+    self.trackHorizontalPadding = 10;
+    self.infinityLoop = NO;
+    self.dragEnable = NO;
+    self.joinWithLeftEdge = NO;
 }
 
 - (void)start {
@@ -154,6 +154,33 @@
         
     }
     return minWidthIndex;
+}
+
+- (void)setInfinityLoop:(BOOL)infinityLoop {
+    _infinityLoop = infinityLoop;
+    for (KFFlyCommentTrackView *trackView in self.trackArray) {
+        trackView.infinityLoop = infinityLoop;
+    }
+}
+
+- (void)setTrackHorizontalPadding:(CGFloat)trackHorizontalPadding {
+    _trackHorizontalPadding = trackHorizontalPadding;
+    for (KFFlyCommentTrackView *trackView in self.trackArray) {
+        trackView.trackHorizontalPadding = trackHorizontalPadding;
+    }
+}
+
+- (void)setJoinWithLeftEdge:(BOOL)joinWithLeftEdge {
+    _joinWithLeftEdge = joinWithLeftEdge;
+    for (KFFlyCommentTrackView *trackView in self.trackArray) {
+        trackView.joinWithLeftEdge = joinWithLeftEdge;
+    }
+}
+
+- (void)setDragEnable:(BOOL)dragEnable {
+    for (KFFlyCommentTrackView *trackView in self.trackArray) {
+        trackView.dragEnable = dragEnable;
+    }
 }
 
 @end

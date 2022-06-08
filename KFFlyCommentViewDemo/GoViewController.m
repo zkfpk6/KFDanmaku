@@ -25,8 +25,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.commentView = [[KFFlyCommentView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 0) infinityLoop:YES trackVerticalMargin:10 trackHorizontalPadding:10 trackHeight:100 trackSpeedArray:self.speedArray];
+    self.commentView = [[KFFlyCommentView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, 0) trackVerticalMargin:10 trackHeight:100 trackSpeedArray:self.speedArray];
     [self.view addSubview:self.commentView];
+//    self.commentView.infinityLoop = YES;
+//    self.commentView.joinWithLeftEdge = YES;
+//    self.commentView.dragEnable = YES;
     [self.commentView start];
 }
 
