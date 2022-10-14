@@ -13,12 +13,12 @@
 		F9207B601EC2A7790025BD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9207B5E1EC2A7790025BD31 /* Main.storyboard */; };
 		F9207B621EC2A7790025BD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9207B611EC2A7790025BD31 /* Assets.xcassets */; };
 		F9207B651EC2A7790025BD31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9207B631EC2A7790025BD31 /* LaunchScreen.storyboard */; };
-		F9207B761EC2A78A0025BD31 /* KFFlyCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B6F1EC2A78A0025BD31 /* KFFlyCommentView.m */; };
-		F9207B781EC2A78A0025BD31 /* KFFlyCommentTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B731EC2A78A0025BD31 /* KFFlyCommentTrackView.m */; };
 		F9207B7D1EC2AD170025BD31 /* GoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B7C1EC2AD170025BD31 /* GoViewController.m */; };
 		F9207B821EC2B1D00025BD31 /* YGFlyCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B7F1EC2B1CF0025BD31 /* YGFlyCommentModel.m */; };
 		F9207B831EC2B1D00025BD31 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B811EC2B1D00025BD31 /* CustomView.m */; };
 		F9207B861EC2B1F70025BD31 /* YGFlyCommentViewAnother.m in Sources */ = {isa = PBXBuildFile; fileRef = F9207B851EC2B1F70025BD31 /* YGFlyCommentViewAnother.m */; };
+		F975F1C728F9233F00090ADE /* KFFlyCommentTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = F975F1C528F9233F00090ADE /* KFFlyCommentTrackView.m */; };
+		F975F1C828F9233F00090ADE /* KFFlyCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F975F1C628F9233F00090ADE /* KFFlyCommentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +32,6 @@
 		F9207B611EC2A7790025BD31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9207B641EC2A7790025BD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9207B661EC2A7790025BD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9207B6E1EC2A78A0025BD31 /* KFFlyCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFFlyCommentView.h; sourceTree = "<group>"; };
-		F9207B6F1EC2A78A0025BD31 /* KFFlyCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFFlyCommentView.m; sourceTree = "<group>"; };
-		F9207B721EC2A78A0025BD31 /* KFFlyCommentTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFFlyCommentTrackView.h; sourceTree = "<group>"; };
-		F9207B731EC2A78A0025BD31 /* KFFlyCommentTrackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFFlyCommentTrackView.m; sourceTree = "<group>"; };
 		F9207B7B1EC2AD170025BD31 /* GoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoViewController.h; sourceTree = "<group>"; };
 		F9207B7C1EC2AD170025BD31 /* GoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoViewController.m; sourceTree = "<group>"; };
 		F9207B7E1EC2B1CF0025BD31 /* YGFlyCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFlyCommentModel.h; sourceTree = "<group>"; };
@@ -44,6 +40,10 @@
 		F9207B811EC2B1D00025BD31 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		F9207B841EC2B1F70025BD31 /* YGFlyCommentViewAnother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGFlyCommentViewAnother.h; sourceTree = "<group>"; };
 		F9207B851EC2B1F70025BD31 /* YGFlyCommentViewAnother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGFlyCommentViewAnother.m; sourceTree = "<group>"; };
+		F975F1C328F9233F00090ADE /* KFFlyCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFFlyCommentView.h; sourceTree = "<group>"; };
+		F975F1C428F9233F00090ADE /* KFFlyCommentTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFFlyCommentTrackView.h; sourceTree = "<group>"; };
+		F975F1C528F9233F00090ADE /* KFFlyCommentTrackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFFlyCommentTrackView.m; sourceTree = "<group>"; };
+		F975F1C628F9233F00090ADE /* KFFlyCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFFlyCommentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 		F9207B541EC2A7790025BD31 /* KFFlyCommentViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F9207B6C1EC2A78A0025BD31 /* KFFlyCommentView */,
+				F975F1C228F9233F00090ADE /* KFFlyCommentView */,
 				F9207B581EC2A7790025BD31 /* AppDelegate.h */,
 				F9207B591EC2A7790025BD31 /* AppDelegate.m */,
 				F9207B7E1EC2B1CF0025BD31 /* YGFlyCommentModel.h */,
@@ -106,13 +106,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F9207B6C1EC2A78A0025BD31 /* KFFlyCommentView */ = {
+		F975F1C228F9233F00090ADE /* KFFlyCommentView */ = {
 			isa = PBXGroup;
 			children = (
-				F9207B6E1EC2A78A0025BD31 /* KFFlyCommentView.h */,
-				F9207B6F1EC2A78A0025BD31 /* KFFlyCommentView.m */,
-				F9207B721EC2A78A0025BD31 /* KFFlyCommentTrackView.h */,
-				F9207B731EC2A78A0025BD31 /* KFFlyCommentTrackView.m */,
+				F975F1C328F9233F00090ADE /* KFFlyCommentView.h */,
+				F975F1C428F9233F00090ADE /* KFFlyCommentTrackView.h */,
+				F975F1C528F9233F00090ADE /* KFFlyCommentTrackView.m */,
+				F975F1C628F9233F00090ADE /* KFFlyCommentView.m */,
 			);
 			path = KFFlyCommentView;
 			sourceTree = "<group>";
@@ -190,14 +190,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9207B7D1EC2AD170025BD31 /* GoViewController.m in Sources */,
+				F975F1C728F9233F00090ADE /* KFFlyCommentTrackView.m in Sources */,
 				F9207B5D1EC2A7790025BD31 /* ViewController.m in Sources */,
-				F9207B761EC2A78A0025BD31 /* KFFlyCommentView.m in Sources */,
 				F9207B5A1EC2A7790025BD31 /* AppDelegate.m in Sources */,
 				F9207B821EC2B1D00025BD31 /* YGFlyCommentModel.m in Sources */,
-				F9207B781EC2A78A0025BD31 /* KFFlyCommentTrackView.m in Sources */,
 				F9207B861EC2B1F70025BD31 /* YGFlyCommentViewAnother.m in Sources */,
 				F9207B831EC2B1D00025BD31 /* CustomView.m in Sources */,
 				F9207B571EC2A7790025BD31 /* main.m in Sources */,
+				F975F1C828F9233F00090ADE /* KFFlyCommentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

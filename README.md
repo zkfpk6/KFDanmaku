@@ -27,34 +27,37 @@
  创建轨道
 
  @param frame frame
- @param trackHorizontalPadding 横向间距
- @param trackVerticalPadding 轨道纵向间距
- @param trackHeight 轨道高
+ @param trackHeight 轨道高度
  @param trackSpeedArray 轨道速度数组
  */
- _danmakuView = [[KFFlyCommentView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height) 
-                                 trackHorizontalPadding:10 
-                                   trackVerticalPadding:10 
-                                            trackHeight:40 
-                                        trackSpeedArray:_speedArray];
- [self.view addSubview:_danmakuView];
+ // 弹幕
+ // 1秒前进ptPerSecond 1fps前进ptPerSecond/COMMENT_VIEW_CONFIG_FPS
+ CGFloat ptPerSecond = 20.0;
+ KFFlyCommentView *commentView = [[KFFlyCommentView alloc] initWithFrame:CGRectMake(0, 0, self.width, 0)
+                                                     trackVerticalMargin:0
+                                                             trackHeight:30 + 12
+                                                         trackSpeedArray:@[@(ptPerSecond/COMMENT_VIEW_CONFIG_FPS), @(ptPerSecond/COMMENT_VIEW_CONFIG_FPS)]];
+ commentView.infinityLoop = YES;
+ commentView.joinWithLeftEdge = YES;
+ commentView.dragEnable = YES;
+ commentView.trackHorizontalPadding = 12;
+ commentView.y = self.backgroundImageView.maxY - commentView.height - 10;
+ [self addSubview:commentView];
 
 /**
  插入一条弹幕，可以插入任意继承UIView的对象
 
- @param customView 自定义的继承于view（注意，最高不能超过轨道的高，否则会出问题。
-轨道的高度请在FlyCommentViewConfig.h中配置）
+ @param customView 自定义的继承于view（注意，最高不能超过轨道的高，否则会出问题）
  @param trackIndex 插入弹幕的轨道（为-1则代表自动寻找最不拥挤的轨道插入）
  */
- [_danmakuView appendFlyCommentWithCustomView:customView toTrackIndex:-1];
+ [commentView appendFlyCommentWithCustomView:customView toTrackIndex:-1];
 ```
 ##### 创建弹幕
  ```objc
  - (instancetype)initWithFrame:(CGRect)frame
-        trackHorizontalPadding:(CGFloat)trackHorizontalPadding
-          trackVerticalPadding:(CGFloat)trackVerticalPadding
+           trackVerticalMargin:(CGFloat)trackVerticalMargin
                    trackHeight:(CGFloat)trackHeight
-               trackSpeedArray:(NSArray *)trackSpeedArray;
+              trackSpeedArray:(NSArray *)trackSpeedArray;
  ```
  
  ##### 插入一条弹幕
